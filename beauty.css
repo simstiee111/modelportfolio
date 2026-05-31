@@ -1,0 +1,50 @@
+/* Заголовок Beauty — тот же стиль, что у GALLERY/Digitals/Fashion */
+.beauty-title {
+    font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: #f4e7da;
+    text-align: center;
+    margin: 24px auto 36px;
+    line-height: 1;
+}
+
+.beauty-main {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 80px 40px;
+}
+
+/* Сетка 2 колонки × 4 ряда */
+.beauty-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+}
+
+.beauty-grid img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .beauty-main { padding: 0 40px 32px; }
+    .beauty-grid { gap: 24px; }
+    .beauty-title { font-size: 40px; }
+}
+
+@media (max-width: 600px) {
+    .beauty-main { padding: 0 16px 24px; }
+    .beauty-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .beauty-title { font-size: 32px; }
+}

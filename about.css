@@ -1,0 +1,127 @@
+/* Светлая тема страницы About me */
+.page-about {
+    background-color: #f4e7da;
+}
+
+.container-light {
+    background-color: #f4e7da;
+    padding-bottom: 0;
+}
+
+/* Тёмно-красный цвет заголовка вместо кремового */
+.name-dark {
+    color: #9a0002;
+}
+
+/* Меню в тёмно-красном */
+.menu-dark a {
+    color: #9a0002;
+}
+
+/* Основной блок: текст слева, фото справа */
+.about-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+    max-width: 1480px;
+    margin: 60px auto 80px;
+    padding: 0 80px;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1 1 0;
+    color: #9a0002;
+    font-family: 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: condensed;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-photo-wrapper {
+    flex: 1.1 1 0;
+    align-self: stretch;
+    display: flex;
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    max-height: 760px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.about-heading,
+.measurements-heading {
+    font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #9a0002;
+    margin: 0 0 18px;
+}
+
+.about-heading { font-size: 32px; }
+.measurements-heading { font-size: 26px; margin-top: 36px; }
+
+.about-bio {
+    margin: 0;
+    max-width: 460px;
+}
+
+.measurements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.measurements-list li {
+    margin-bottom: 4px;
+}
+
+.measure-label {
+    display: inline-block;
+    min-width: 150px;
+}
+
+/* Светлый подвал: красные иконки на кремовом фоне */
+.site-footer-light {
+    background-color: #f4e7da;
+    margin-top: 0;
+    padding: 50px 24px 60px;
+}
+
+.socials-dark a {
+    color: #9a0002;
+}
+
+/* адаптивность */
+@media (max-width: 1100px) {
+    .about-main {
+        padding: 0 40px;
+        gap: 40px;
+    }
+    .about-heading { font-size: 28px; }
+    .measurements-heading { font-size: 22px; }
+    .about-text { font-size: 17px; }
+}
+
+@media (max-width: 760px) {
+    .about-main {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 24px;
+        gap: 32px;
+        margin: 40px auto 60px;
+    }
+    .about-photo-wrapper { order: -1; }
+    .about-photo { max-height: 480px; }
+    .about-bio { max-width: 100%; }
+    .measure-label { min-width: 130px; }
+}
